@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to handle the login button click
   const handleLogin = () => {
     const clientId = '5ogo4t9c3l3hh7kp15irq5rdu4';
-    const redirectUri = 'http://localhost:63342/project-smith-main/index2.html'; // Should match the one used in the original authorization request
+    const redirectUri = 'https://main.d375cwsx9dxbga.amplifyapp.com/index2.html'; // Should match the one used in the original authorization request
 
     // Initiate the Cognito hosted UI login
     const loginUrl = `https://smith-project.auth.us-west-2.amazoncognito.com/login?response_type=token&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
