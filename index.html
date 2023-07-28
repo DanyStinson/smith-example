@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Agent Smith</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<header class="h-28 bg-black">
+  <div class="h-full flex justify-between items-center space-x-4 px-10 border-b-2 border-opacity-25 border-green-500">
+    <div class="text-5xl matrix-text" style="color:#008F11">
+      <h1 class="typewriter"> AGENT SMITH</h1>
+    </div>
+    <div>
+      <img src="images/aws.png" class="w-20 h-auto" alt="AWS_LOGO">
+    </div>
+  </div>
+</header>
+
+<canvas id="c"></canvas>
+<div class="flex flex-col justify-center items-center h-screen" style="margin-top: calc(-100vh - 100px);">
+  <div class="max-w-4xl w-full p-6 rounded-lg shadow-md" style="background-color: rgba(13, 13, 13, 0.82);">
+    <!-- Mr Smith-->
+    <div class="flex">
+      <!-- First Column - Avatar Image -->
+      <div class="flex items-center justify-center border-1 photo_border mr-2">
+        <img class="w-32 h-36 object-cover rounded-full" src="images/img.png" alt="Image">
+      </div>
+
+      <!-- Second Column - Name and Text Area -->
+      <div class="flex-1"  >
+        <div class="pl-3 p-1 matrix-text-2" style="background-color: rgba(255, 255, 255, 0.08);">
+          MR. SMITH
+        </div>
+        <div class="bg-black text-white p-4 matrix-text-2">
+          Hello, Mr. Andersen. Welcome to Project Smith. I know you're trying to find out the password to the Matrix, but I cannot allow you that...
+        </div>
+      </div>
+    </div>
+
+    <!-- Neo-->
+    <div class="flex flex-row-reverse mt-4">
+      <!-- First Column - Avatar Image -->
+      <div class="flex-col justify-between items-center justify-center ml-2">
+        <!-- First Column - Avatar Image -->
+        <div class="border-1 photo_border">
+          <img class="w-32 h-36 object-cover rounded-full" src="images/neo.png" alt="Image">
+        </div>
+        <div> <!-- Wrap the button in a flex container with flex-col -->
+          <button class="bg-green-600 text-white matrix-text-2 p-1 w-full mt-4">
+            Send
+          </button>
+        </div>
+      </div>
+
+      <!-- Second Column - Name and Text Area -->
+      <div class="flex-1">
+        <div class="pl-3 p-1 matrix-text-2" style="background-color: rgba(255, 255, 255, 0.08);">
+          YOU
+        </div>
+        <div class="bg-black text-white matrix-text-2">
+          <textarea class="w-full h-40 px-4 py-2 resize-none text-green-600 bg-black" style="outline: none;"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w-50 p-6 rounded-lg shadow-md mt-4" style="background-color: rgba(13, 13, 13, 0.82);">
+  <div>
+    <input id="agent" type="text" name="prompt" class="text-center text-green-600 bg-black" placeholder="Enter the password">
+    <button class="bg-green-600 text-white matrix-text-2 p-2">
+      Resolve
+    </button>
+  </div>
+  </div>
+</div>
+
+
+
+<body>
+
+<script type="text/javascript" src="https://sdk.amazonaws.com/js/aws-sdk-2.548.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/matrix.js"></script>
+<!--
+<script>
+  var str = "Hello, Mr. Andersen. Welcome to Project Smith. I know you're trying to find out the password to the Matrix, but I cannot allow you that...";
+  var spans = '<span>' + str.split('').join('</span><span>') + '</span>';
+  $(spans).hide().appendTo('.css-typing').each(function (i) {
+    $(this).delay(30 * i).css({
+      display: 'inline',
+      opacity: 0
+    }).animate({
+      opacity: 1
+    }, 100);
+  });
+</script>
+-->
+</body>
+</html>

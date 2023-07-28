@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#login-container, #welcome-container {
+  margin: 20px;
+}
+
+#login-btn, #logout-btn {
+  background-color: #007BFF;
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login-btn:hover, #logout-btn:hover {
+  background-color: #0056b3;
+}
