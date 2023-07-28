@@ -23,7 +23,36 @@
 </header>
 
 <canvas id="c"></canvas>
-<div class="flex flex-col justify-center items-center h-screen" style="margin-top: calc(-100vh - 100px);">
+
+<div id="login-container" class="flex flex-col justify-center items-center h-screen" style="margin-top: calc(-100vh - 100px);">
+  <div class="max-w-4xl w-full p-6 rounded-lg shadow-md" style="background-color: rgba(13, 13, 13, 0.82);">
+    <!-- Morpheus-->
+    <div class="flex">
+      <!-- First Column - Avatar Image -->
+      <div class="flex items-center justify-center border-1 photo_border mr-2">
+        <img class="w-32 h-36 object-cover rounded-full" src="images/morpheus.png" alt="Image">
+      </div>
+      <!-- Second Column - Name and Text Area -->
+      <div class="flex-1">
+        <div class="pl-3 p-1 matrix-text-2" style="background-color: rgba(255, 255, 255, 0.08);">
+          MORPHEUS
+        </div>
+        <div class="bg-black text-white p-4 matrix-text-2">
+          I can only show you the form. You're the one that has to Log In....
+        </div>
+        <div class="flex items-center justify-center space-x-4">
+          <button id="login-btn-1" class="px-4 py-2 bg-blue-500 matrix-text-2 text-white rounded-full shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+            Log In
+          </button>
+          <button id="login-btn-2" class="px-4 py-2 bg-red-500 matrix-text-2 text-white rounded-full shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+            Log In
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="game-container" class="flex flex-col justify-center items-center h-screen" style="margin-top: calc(-100vh - 100px); display: none">
   <div class="max-w-4xl w-full p-6 rounded-lg shadow-md" style="background-color: rgba(13, 13, 13, 0.82);">
     <!-- Mr Smith-->
     <div class="flex">
@@ -69,19 +98,15 @@
       </div>
     </div>
   </div>
-
-
   <div class="w-50 p-6 rounded-lg shadow-md mt-4" style="background-color: rgba(13, 13, 13, 0.82);">
-  <div>
-    <input id="agent" type="text" name="prompt" class="text-center text-green-600 bg-black" placeholder="Enter the password">
-    <button class="bg-green-600 text-white matrix-text-2 p-2">
-      Resolve
-    </button>
-  </div>
+    <div>
+      <input id="agent" type="text" name="prompt" class="text-center text-green-600 bg-black" placeholder="Enter the password">
+      <button class="bg-green-600 text-white matrix-text-2 p-2">
+        Resolve
+      </button>
+    </div>
   </div>
 </div>
-
-
 
 <body>
 
@@ -89,8 +114,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="./js/script.js"></script>
+
 <script type="text/javascript" src="./js/matrix.js"></script>
+<script type="text/javascript" src="./js/authentication.js"></script>
 <!--
 <script>
   var str = "Hello, Mr. Andersen. Welcome to Project Smith. I know you're trying to find out the password to the Matrix, but I cannot allow you that...";
